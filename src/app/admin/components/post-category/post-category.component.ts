@@ -10,20 +10,18 @@ import { AdminService } from '../../service/admin.service';
   styleUrls: ['./post-category.component.css']
 })
 export class PostCategoryComponent {
-
-  categoryForm: FormGroup;
-
+  categoryForm!: FormGroup;
   constructor(
-    private fb:FormBuilder,
-    private router: Router,
+    private fb: FormBuilder,
+    private router : Router,
     private snackBar: MatSnackBar,
     private adminService: AdminService
-  ){}
+  ){ }
 
-  ngOnInit(): void{
+  ngOnInit() : void{
     this.categoryForm = this.fb.group({
-      name: [null, [Validators.required]],
-      description: [null, [Validators.required]],
+      name : [null, [Validators.required]],
+      description:[null,[Validators.required]],
     })
   }
 
@@ -31,20 +29,18 @@ export class PostCategoryComponent {
     if(this.categoryForm.valid){
       this.adminService.addCategory(this.categoryForm.value).subscribe((res) =>{
         if(res.id != null){
-          this.snackBar.open('Category Posted SuccessFully!', 'close',{
+          this.snackBar.open('category Posted Successfully!', 'Close',{
             duration: 5000
           });
-          this.router.navigateByUrl('/admin/dashboard')
-        }
-        else{
-          this.snackBar.open(res.message, 'close', {
-            duration: 5000,
-            panelClass: 'error-snackbar'
+          this.router.navigateByUrl('/admin/dashboard');
+        }else{
+          this.snackBar.open(res.message,'Close',{
+            duration : 5000,
+            panelClass:'error-snackbar'
           });
         }
       })
-    }
-    else{
+    }else{
       this.categoryForm.markAllAsTouched();
     }
   }
