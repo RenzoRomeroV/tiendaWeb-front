@@ -6,14 +6,14 @@
             <mat-label>Name</mat-label>
             <input matInput type="text" placeholder="Name" formControlName="name"/>
             <mat-error *ngIf="categoryForm.get('name')?.hasError('required')">This input is required!</mat-error>
-        </mat-form-field>
-
+        </mat-form-field> 
+        
         <mat-form-field apperance="outline" class="form-field">
             <mat-label>Description</mat-label>
             <input matInput type="text" placeholder="description" formControlName="description"/>
             <mat-error *ngIf="categoryForm.get('description')?.hasError('required')">This input is required!</mat-error>
         </mat-form-field>
-
+        
         <button mat-raised-button color="primary" type="submit">Add Category</button>
     </form>
 </div>
