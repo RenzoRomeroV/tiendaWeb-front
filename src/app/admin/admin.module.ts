@@ -21,12 +21,13 @@ import { MatDividerModule } from '@angular/material/divider'; // Importa MatDivi
 
 
 
+
 @NgModule({
   declarations: [
     AdminComponent,
     DashboardComponent,
     PostCategoryComponent,
-    PostProductComponent
+    PostProductComponent,
   ],
   imports: [
     CommonModule,
