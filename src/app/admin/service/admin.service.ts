@@ -96,9 +96,10 @@ export class AdminService {
     })
   }
 
-  private createAuthorizationHeader(): HttpHeaders{
-    return new HttpHeaders().set(
-      'Authorization', 'Bearer' + UserStorageService.getToken()
-    )
+  private createAuthorizationHeader(): HttpHeaders {
+    const token = UserStorageService.getToken();
+    if (!token) {
+      throw new Error('Token no encontrado o inválido.');
+    }
+    return new HttpHeaders().set('Authorization', `Bearer ${token}`);
   }
-}
