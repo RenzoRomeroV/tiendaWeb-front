@@ -30,6 +30,8 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { PostProductFaqComponent } from './components/post-product-faq/post-product-faq.component';
 import { UpdateProductComponent } from './components/update-product/update-product.component';
+import { AnalyticsComponent } from './components/analytics/analytics.component';
+import { OrderByStatusComponent } from './components/analytics/order-by-status/order-by-status.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { UpdateProductComponent } from './components/update-product/update-produ
     OrdersComponent,
     PostProductFaqComponent,
     UpdateProductComponent,
+    AnalyticsComponent,
+    OrderByStatusComponent,
   ],
   imports: [
     CommonModule,
