@@ -16,11 +16,20 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';  // Para el sna
 import { MatIconModule } from '@angular/material/icon'; // Importa MatIconModule
 import { MatSelectModule } from '@angular/material/select'; // Importa MatSelectModule
 import { MatCardModule } from '@angular/material/card'; // Importa MatCardModule
-import { MatDividerModule } from '@angular/material/divider'; // Importa MatDividerModule
+import { MatDividerModule } from '@angular/material/divider';
+import { PostCouponComponent } from './components/post-coupon/post-coupon.component';
+import { CouponsComponent } from './components/coupons/coupons.component'; // Importa MatDividerModule
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
+import { MatTableModule } from '@angular/material/table';
+import { OrdersComponent } from './components/orders/orders.component';
 
-
+// Importar módulos de Angular Material
+import { MatMenuModule } from '@angular/material/menu';
+import { PostProductFaqComponent } from './components/post-product-faq/post-product-faq.component';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +37,11 @@ import { MatDividerModule } from '@angular/material/divider'; // Importa MatDivi
     DashboardComponent,
     PostCategoryComponent,
     PostProductComponent,
+    PostCouponComponent,
+    CouponsComponent,
+    OrdersComponent,
+    PostProductFaqComponent,
+    UpdateProductComponent,
   ],
   imports: [
     CommonModule,
@@ -41,7 +55,10 @@ import { MatDividerModule } from '@angular/material/divider'; // Importa MatDivi
     MatSelectModule, // Exporta si es necesario
     MatCardModule, // Exporta si usas módulos compartidos
     MatDividerModule, // Exporta si estás usando un módulo compartido
-
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatTableModule,
+    MatMenuModule
   ]
 })
 export class AdminModule { }

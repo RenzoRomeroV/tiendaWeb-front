@@ -14,14 +14,30 @@ import { MatIconModule } from '@angular/material/icon'; // Importa MatIconModule
 import { MatSelectModule } from '@angular/material/select'; // Importa MatSelectModule
 import { MatCardModule } from '@angular/material/card'; // Importa MatCardModule
 import { MatDividerModule } from '@angular/material/divider';
-import { CartComponent } from './components/cart/cart.component'; // Importa MatDividerModule
+import { CartComponent } from './components/cart/cart.component';
+import { PlaceOrderComponent } from './components/place-order/place-order.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component'; // Importa MatDividerModule
+
+import { MatTableModule } from '@angular/material/table'; // Importa MatTableModule
+import { MatPaginatorModule } from '@angular/material/paginator'; // Para la paginación de tablas
+import { MatSortModule } from '@angular/material/sort';
+import { ViewOrderedProductsComponent } from './components/view-ordered-products/view-ordered-products.component'; // Para la funcionalidad de ordenamiento en tablas
+import { ViewProductDetailComponent } from './components/view-product-detail/view-product-detail.component';
+import { ReviewOrderedProductComponent } from './components/review-ordered-product/review-ordered-product.component';
+import { ViewWishlistComponent } from './components/view-wishlist/view-wishlist.component';
 
 
 @NgModule({
   declarations: [
     CustomerComponent,
     DashboardComponent,
-    CartComponent
+    CartComponent,
+    PlaceOrderComponent,
+    MyOrdersComponent,
+    ViewOrderedProductsComponent,
+    ViewProductDetailComponent,
+    ReviewOrderedProductComponent,
+    ViewWishlistComponent
   ],
   imports: [
     CommonModule,
@@ -35,6 +51,9 @@ import { CartComponent } from './components/cart/cart.component'; // Importa Mat
     MatSelectModule, // Exporta si es necesario
     MatCardModule, // Exporta si usas módulos compartidos
     MatDividerModule, // Exporta si estás usando un módulo compartido
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 export class CustomerModule { }
